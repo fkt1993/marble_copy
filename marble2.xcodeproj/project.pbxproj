@@ -1,0 +1,634 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C56D7A501D1E4C9700DB4347 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D7A4F1D1E4C9700DB4347 /* AppDelegate.swift */; };
+		C56D7A521D1E4C9700DB4347 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D7A511D1E4C9700DB4347 /* ViewController.swift */; };
+		C56D7A551D1E4C9700DB4347 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C56D7A531D1E4C9700DB4347 /* Main.storyboard */; };
+		C56D7A571D1E4C9700DB4347 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C56D7A561D1E4C9700DB4347 /* Assets.xcassets */; };
+		C56D7A5A1D1E4C9700DB4347 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C56D7A581D1E4C9700DB4347 /* LaunchScreen.storyboard */; };
+		C56D7A651D1E4C9700DB4347 /* marble2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D7A641D1E4C9700DB4347 /* marble2Tests.swift */; };
+		C56D7A701D1E4C9700DB4347 /* marble2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D7A6F1D1E4C9700DB4347 /* marble2UITests.swift */; };
+		C56D7A821D1E504E00DB4347 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56D7A7E1D1E504E00DB4347 /* Alamofire.framework */; };
+		C56D7A831D1E504E00DB4347 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C56D7A7E1D1E504E00DB4347 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C56D7A841D1E504E00DB4347 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56D7A7F1D1E504E00DB4347 /* BrightFutures.framework */; };
+		C56D7A851D1E504E00DB4347 /* BrightFutures.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C56D7A7F1D1E504E00DB4347 /* BrightFutures.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C56D7A861D1E504E00DB4347 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56D7A801D1E504E00DB4347 /* Result.framework */; };
+		C56D7A871D1E504E00DB4347 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C56D7A801D1E504E00DB4347 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C56D7A881D1E504E00DB4347 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56D7A811D1E504E00DB4347 /* SwiftyJSON.framework */; };
+		C56D7A891D1E504F00DB4347 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C56D7A811D1E504E00DB4347 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C56D7A8E1D1ED2AE00DB4347 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D7A8D1D1ED2AE00DB4347 /* ApiManager.swift */; };
+		C56D7A961D20FF5D00DB4347 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D7A951D20FF5D00DB4347 /* ArticleViewController.swift */; };
+		C56D7A981D2293DF00DB4347 /* ArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C56D7A971D2293DF00DB4347 /* ArticleCell.xib */; };
+		C56D7A9C1D229D6800DB4347 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D7A9B1D229D6800DB4347 /* ArticleCell.swift */; };
+		C5A2857F1D268340004AFEDD /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A2857E1D268340004AFEDD /* Utils.swift */; };
+		C5A285811D26875A004AFEDD /* ApiUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A285801D26875A004AFEDD /* ApiUrl.swift */; };
+		C5B5445D1D22A2CA00D0A658 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B5445C1D22A2CA00D0A658 /* Article.swift */; };
+		C5B5445F1D22A4E700D0A658 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B5445E1D22A4E700D0A658 /* User.swift */; };
+		C5B544611D22A51000D0A658 /* utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B544601D22A51000D0A658 /* utilities.swift */; };
+		C5B544631D22ADA600D0A658 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B544621D22ADA600D0A658 /* ArticleViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C56D7A611D1E4C9700DB4347 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C56D7A441D1E4C9700DB4347 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C56D7A4B1D1E4C9700DB4347;
+			remoteInfo = marble2;
+		};
+		C56D7A6C1D1E4C9700DB4347 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C56D7A441D1E4C9700DB4347 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C56D7A4B1D1E4C9700DB4347;
+			remoteInfo = marble2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C56D7A8A1D1E504F00DB4347 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C56D7A891D1E504F00DB4347 /* SwiftyJSON.framework in Embed Frameworks */,
+				C56D7A871D1E504E00DB4347 /* Result.framework in Embed Frameworks */,
+				C56D7A831D1E504E00DB4347 /* Alamofire.framework in Embed Frameworks */,
+				C56D7A851D1E504E00DB4347 /* BrightFutures.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C56D7A4C1D1E4C9700DB4347 /* marble2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = marble2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C56D7A4F1D1E4C9700DB4347 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C56D7A511D1E4C9700DB4347 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C56D7A541D1E4C9700DB4347 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C56D7A561D1E4C9700DB4347 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C56D7A591D1E4C9700DB4347 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C56D7A5B1D1E4C9700DB4347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C56D7A601D1E4C9700DB4347 /* marble2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = marble2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C56D7A641D1E4C9700DB4347 /* marble2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marble2Tests.swift; sourceTree = "<group>"; };
+		C56D7A661D1E4C9700DB4347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C56D7A6B1D1E4C9700DB4347 /* marble2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = marble2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C56D7A6F1D1E4C9700DB4347 /* marble2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marble2UITests.swift; sourceTree = "<group>"; };
+		C56D7A711D1E4C9700DB4347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C56D7A7E1D1E504E00DB4347 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		C56D7A7F1D1E504E00DB4347 /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = Carthage/Build/iOS/BrightFutures.framework; sourceTree = "<group>"; };
+		C56D7A801D1E504E00DB4347 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		C56D7A811D1E504E00DB4347 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		C56D7A8D1D1ED2AE00DB4347 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		C56D7A951D20FF5D00DB4347 /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		C56D7A971D2293DF00DB4347 /* ArticleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleCell.xib; sourceTree = "<group>"; };
+		C56D7A9B1D229D6800DB4347 /* ArticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
+		C5A2857E1D268340004AFEDD /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		C5A285801D26875A004AFEDD /* ApiUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiUrl.swift; sourceTree = "<group>"; };
+		C5B5445C1D22A2CA00D0A658 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		C5B5445E1D22A4E700D0A658 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C5B544601D22A51000D0A658 /* utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utilities.swift; sourceTree = "<group>"; };
+		C5B544621D22ADA600D0A658 /* ArticleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C56D7A491D1E4C9700DB4347 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C56D7A881D1E504E00DB4347 /* SwiftyJSON.framework in Frameworks */,
+				C56D7A861D1E504E00DB4347 /* Result.framework in Frameworks */,
+				C56D7A821D1E504E00DB4347 /* Alamofire.framework in Frameworks */,
+				C56D7A841D1E504E00DB4347 /* BrightFutures.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C56D7A5D1D1E4C9700DB4347 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C56D7A681D1E4C9700DB4347 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C56D7A431D1E4C9700DB4347 = {
+			isa = PBXGroup;
+			children = (
+				C56D7A7E1D1E504E00DB4347 /* Alamofire.framework */,
+				C56D7A7F1D1E504E00DB4347 /* BrightFutures.framework */,
+				C56D7A801D1E504E00DB4347 /* Result.framework */,
+				C56D7A811D1E504E00DB4347 /* SwiftyJSON.framework */,
+				C56D7A4E1D1E4C9700DB4347 /* marble2 */,
+				C56D7A631D1E4C9700DB4347 /* marble2Tests */,
+				C56D7A6E1D1E4C9700DB4347 /* marble2UITests */,
+				C56D7A4D1D1E4C9700DB4347 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C56D7A4D1D1E4C9700DB4347 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C56D7A4C1D1E4C9700DB4347 /* marble2.app */,
+				C56D7A601D1E4C9700DB4347 /* marble2Tests.xctest */,
+				C56D7A6B1D1E4C9700DB4347 /* marble2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C56D7A4E1D1E4C9700DB4347 /* marble2 */ = {
+			isa = PBXGroup;
+			children = (
+				C56D7A8B1D1ED17F00DB4347 /* models */,
+				C56D7A4F1D1E4C9700DB4347 /* AppDelegate.swift */,
+				C56D7A951D20FF5D00DB4347 /* ArticleViewController.swift */,
+				C56D7A511D1E4C9700DB4347 /* ViewController.swift */,
+				C56D7A531D1E4C9700DB4347 /* Main.storyboard */,
+				C56D7A561D1E4C9700DB4347 /* Assets.xcassets */,
+				C56D7A8C1D1ED27E00DB4347 /* Utilities */,
+				C56D7A581D1E4C9700DB4347 /* LaunchScreen.storyboard */,
+				C56D7A5B1D1E4C9700DB4347 /* Info.plist */,
+				C56D7A971D2293DF00DB4347 /* ArticleCell.xib */,
+				C56D7A9B1D229D6800DB4347 /* ArticleCell.swift */,
+			);
+			path = marble2;
+			sourceTree = "<group>";
+		};
+		C56D7A631D1E4C9700DB4347 /* marble2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C56D7A641D1E4C9700DB4347 /* marble2Tests.swift */,
+				C56D7A661D1E4C9700DB4347 /* Info.plist */,
+			);
+			path = marble2Tests;
+			sourceTree = "<group>";
+		};
+		C56D7A6E1D1E4C9700DB4347 /* marble2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				C56D7A6F1D1E4C9700DB4347 /* marble2UITests.swift */,
+				C56D7A711D1E4C9700DB4347 /* Info.plist */,
+			);
+			path = marble2UITests;
+			sourceTree = "<group>";
+		};
+		C56D7A8B1D1ED17F00DB4347 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				C5B5445C1D22A2CA00D0A658 /* Article.swift */,
+				C5B5445E1D22A4E700D0A658 /* User.swift */,
+				C5B544621D22ADA600D0A658 /* ArticleViewModel.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		C56D7A8C1D1ED27E00DB4347 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C56D7A8D1D1ED2AE00DB4347 /* ApiManager.swift */,
+				C5A2857E1D268340004AFEDD /* Utils.swift */,
+				C5A285801D26875A004AFEDD /* ApiUrl.swift */,
+				C5B544601D22A51000D0A658 /* utilities.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C56D7A4B1D1E4C9700DB4347 /* marble2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C56D7A741D1E4C9700DB4347 /* Build configuration list for PBXNativeTarget "marble2" */;
+			buildPhases = (
+				C56D7A481D1E4C9700DB4347 /* Sources */,
+				C56D7A491D1E4C9700DB4347 /* Frameworks */,
+				C56D7A4A1D1E4C9700DB4347 /* Resources */,
+				C56D7A7D1D1E4EBA00DB4347 /* Install Livraries By Carthage */,
+				C56D7A8A1D1E504F00DB4347 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = marble2;
+			productName = marble2;
+			productReference = C56D7A4C1D1E4C9700DB4347 /* marble2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C56D7A5F1D1E4C9700DB4347 /* marble2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C56D7A771D1E4C9700DB4347 /* Build configuration list for PBXNativeTarget "marble2Tests" */;
+			buildPhases = (
+				C56D7A5C1D1E4C9700DB4347 /* Sources */,
+				C56D7A5D1D1E4C9700DB4347 /* Frameworks */,
+				C56D7A5E1D1E4C9700DB4347 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C56D7A621D1E4C9700DB4347 /* PBXTargetDependency */,
+			);
+			name = marble2Tests;
+			productName = marble2Tests;
+			productReference = C56D7A601D1E4C9700DB4347 /* marble2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C56D7A6A1D1E4C9700DB4347 /* marble2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C56D7A7A1D1E4C9700DB4347 /* Build configuration list for PBXNativeTarget "marble2UITests" */;
+			buildPhases = (
+				C56D7A671D1E4C9700DB4347 /* Sources */,
+				C56D7A681D1E4C9700DB4347 /* Frameworks */,
+				C56D7A691D1E4C9700DB4347 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C56D7A6D1D1E4C9700DB4347 /* PBXTargetDependency */,
+			);
+			name = marble2UITests;
+			productName = marble2UITests;
+			productReference = C56D7A6B1D1E4C9700DB4347 /* marble2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C56D7A441D1E4C9700DB4347 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "深津裕樹";
+				TargetAttributes = {
+					C56D7A4B1D1E4C9700DB4347 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					C56D7A5F1D1E4C9700DB4347 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = C56D7A4B1D1E4C9700DB4347;
+					};
+					C56D7A6A1D1E4C9700DB4347 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = C56D7A4B1D1E4C9700DB4347;
+					};
+				};
+			};
+			buildConfigurationList = C56D7A471D1E4C9700DB4347 /* Build configuration list for PBXProject "marble2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C56D7A431D1E4C9700DB4347;
+			productRefGroup = C56D7A4D1D1E4C9700DB4347 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C56D7A4B1D1E4C9700DB4347 /* marble2 */,
+				C56D7A5F1D1E4C9700DB4347 /* marble2Tests */,
+				C56D7A6A1D1E4C9700DB4347 /* marble2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C56D7A4A1D1E4C9700DB4347 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C56D7A981D2293DF00DB4347 /* ArticleCell.xib in Resources */,
+				C56D7A5A1D1E4C9700DB4347 /* LaunchScreen.storyboard in Resources */,
+				C56D7A571D1E4C9700DB4347 /* Assets.xcassets in Resources */,
+				C56D7A551D1E4C9700DB4347 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C56D7A5E1D1E4C9700DB4347 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C56D7A691D1E4C9700DB4347 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C56D7A7D1D1E4EBA00DB4347 /* Install Livraries By Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/BrightFutures.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+			);
+			name = "Install Livraries By Carthage";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C56D7A481D1E4C9700DB4347 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C56D7A521D1E4C9700DB4347 /* ViewController.swift in Sources */,
+				C56D7A961D20FF5D00DB4347 /* ArticleViewController.swift in Sources */,
+				C5B5445D1D22A2CA00D0A658 /* Article.swift in Sources */,
+				C56D7A8E1D1ED2AE00DB4347 /* ApiManager.swift in Sources */,
+				C56D7A9C1D229D6800DB4347 /* ArticleCell.swift in Sources */,
+				C5A2857F1D268340004AFEDD /* Utils.swift in Sources */,
+				C56D7A501D1E4C9700DB4347 /* AppDelegate.swift in Sources */,
+				C5B544631D22ADA600D0A658 /* ArticleViewModel.swift in Sources */,
+				C5B544611D22A51000D0A658 /* utilities.swift in Sources */,
+				C5B5445F1D22A4E700D0A658 /* User.swift in Sources */,
+				C5A285811D26875A004AFEDD /* ApiUrl.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C56D7A5C1D1E4C9700DB4347 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C56D7A651D1E4C9700DB4347 /* marble2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C56D7A671D1E4C9700DB4347 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C56D7A701D1E4C9700DB4347 /* marble2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C56D7A621D1E4C9700DB4347 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C56D7A4B1D1E4C9700DB4347 /* marble2 */;
+			targetProxy = C56D7A611D1E4C9700DB4347 /* PBXContainerItemProxy */;
+		};
+		C56D7A6D1D1E4C9700DB4347 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C56D7A4B1D1E4C9700DB4347 /* marble2 */;
+			targetProxy = C56D7A6C1D1E4C9700DB4347 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C56D7A531D1E4C9700DB4347 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C56D7A541D1E4C9700DB4347 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C56D7A581D1E4C9700DB4347 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C56D7A591D1E4C9700DB4347 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C56D7A721D1E4C9700DB4347 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C56D7A731D1E4C9700DB4347 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C56D7A751D1E4C9700DB4347 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = marble2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aaaa.marble2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C56D7A761D1E4C9700DB4347 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = marble2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aaaa.marble2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C56D7A781D1E4C9700DB4347 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = marble2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aaaa.marble2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/marble2.app/marble2";
+			};
+			name = Debug;
+		};
+		C56D7A791D1E4C9700DB4347 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = marble2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aaaa.marble2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/marble2.app/marble2";
+			};
+			name = Release;
+		};
+		C56D7A7B1D1E4C9700DB4347 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = marble2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aaaa.marble2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = marble2;
+			};
+			name = Debug;
+		};
+		C56D7A7C1D1E4C9700DB4347 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = marble2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aaaa.marble2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = marble2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C56D7A471D1E4C9700DB4347 /* Build configuration list for PBXProject "marble2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C56D7A721D1E4C9700DB4347 /* Debug */,
+				C56D7A731D1E4C9700DB4347 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C56D7A741D1E4C9700DB4347 /* Build configuration list for PBXNativeTarget "marble2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C56D7A751D1E4C9700DB4347 /* Debug */,
+				C56D7A761D1E4C9700DB4347 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C56D7A771D1E4C9700DB4347 /* Build configuration list for PBXNativeTarget "marble2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C56D7A781D1E4C9700DB4347 /* Debug */,
+				C56D7A791D1E4C9700DB4347 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C56D7A7A1D1E4C9700DB4347 /* Build configuration list for PBXNativeTarget "marble2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C56D7A7B1D1E4C9700DB4347 /* Debug */,
+				C56D7A7C1D1E4C9700DB4347 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C56D7A441D1E4C9700DB4347 /* Project object */;
+}
