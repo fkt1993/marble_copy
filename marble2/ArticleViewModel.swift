@@ -19,7 +19,7 @@ class ArticleViewModel: NSObject {
 
     func fetchArticleList(params: [String: AnyObject]) -> Future<(Int,[Article]), NSError>  {
         let serializer = ArticleSerializer()
-        let url = APIUrl.articleList
+        let url = "http://api.topicks.jp/api/v1/articles/list.json?search_type=category"
         
         return apiManager.get(url, params: params,serializer:serializer)
     }

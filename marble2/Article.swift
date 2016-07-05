@@ -20,7 +20,7 @@ struct Article {
     let modified: Int
     let onePage: Int
     let provider: String
-    let published: Int
+    let published: NSDate
     let thumb: String
     let thumbNormal: String
     let thumbOriginal: String
@@ -37,7 +37,7 @@ struct Article {
         modified = article["modified"].intValue
         onePage = article["one_page"].intValue
         provider = json["provider"].stringValue
-        published = article["published"].intValue
+        published = NSDate.dateFromString(article["published"].stringValue) ?? NSDate()
         thumb = article["thumb"].stringValue
         thumbNormal = article["thumb_normal"].stringValue
         thumbOriginal = article["thumb_original"].stringValue

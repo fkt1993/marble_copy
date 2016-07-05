@@ -53,28 +53,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCellWithIdentifier("index" ,forIndexPath: indexPath)
         
         
-//        let url = NSURL(string:"\(imgArray[indexPath.row])")
-//        var err: NSError?
-//        var imageData = NSData(contentsOfURL: url!,options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)!
-//        var img = UIImage(data:imageData);
-//        
-
-        
-        //let url = NSURL(string: img_url);
-//        let imgData: NSData
-//        
-//        do {
-//            imgData = try NSData(contentsOfURL:url!,options: NSDataReadingOptions.DataReadingMappedIfSafe)
-//            let img = UIImage(data:imgData)
-//            let imgView = UIImageView(image:img)
-//            imgView.frame = CGRectMake(0, 0, 100, 50)
-//            //self.view.addSubview(imgView);
-//            let imageView = tableView.viewWithTag(0) as! UIImageView
-//            imageView.image = imgView
-//        } catch {
-//            print("Error: can't create image.")
-//        }
-        
 
         
         let title = tableView.viewWithTag(1) as! UILabel

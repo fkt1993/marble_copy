@@ -44,6 +44,7 @@ import BrightFutures
 //                print(response.result)
 //            }
     }
+    
     func get<T: ResponseSerializerType>(url: URLStringConvertible, params: [String: AnyObject], serializer: T) -> Future<T.SerializedObject, T.ErrorObject> {
         let promise = Promise<T.SerializedObject, T.ErrorObject>()
         
@@ -55,7 +56,6 @@ import BrightFutures
                     promise.success(r)
                     
                 case .Failure(let error):
-                    print(error)
                     promise.failure(error)
                 }
         }

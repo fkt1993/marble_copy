@@ -20,6 +20,11 @@ class ArticleViewController: UIViewController,UITableViewDelegate,UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "marble"
+        tableView.registerNib(UINib(nibName: "ArticleCell", bundle: nil), forCellReuseIdentifier: "ArticleCell")
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 100
+        
         let params: [String: AnyObject] = [
             "search_type": "category",
             "limit": 30
@@ -33,7 +38,6 @@ class ArticleViewController: UIViewController,UITableViewDelegate,UITableViewDat
             .onFailure { [weak self] error in
                     self?.showErrorAlert(error.localizedDescription, completion: nil)
         }
-        tableView.registerNib(UINib(nibName: "ArticleCell", bundle: nil), forCellReuseIdentifier: "ArticleCell")
 
         
         
@@ -44,18 +48,25 @@ class ArticleViewController: UIViewController,UITableViewDelegate,UITableViewDat
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         
-        switch articles {
-        case let .Some(articles):
-            return articles.count
-            
-        case .None:
-            return 0
-        }
+        return articles?.count ?? 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCellWithIdentifier("index" ,forIndexPath: indexPath) as! ArticleCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("ArticleCell") as! ArticleCell
+
+        if let _ = articles?[indexPath.row]{
+            cell.setCell(articles![indexPath.row])
+        }
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let storyboad: UIStoryboard = UIStoryboard(name: "ArticleDetail", bundle: nil)
+        if let nextVC: ArticleDetailViewController = storyboad.instantiateViewControllerWithIdentifier("ArticleDetail") as? ArticleDetailViewController{
+            nextVC.article = articles![indexPath.row]
+            navigationController?.pushViewController(nextVC, animated: true)
+        }
     }
 
     
