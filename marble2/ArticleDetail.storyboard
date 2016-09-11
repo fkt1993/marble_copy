@@ -19,32 +19,87 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="562" translatesAutoresizingMaskIntoConstraints="NO" id="x86-R0-153">
-                                <rect key="frame" x="20" y="20" width="560" height="21"/>
+                                <rect key="frame" x="20" y="131" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="678-Y1-OHA">
+                                <rect key="frame" x="120" y="20" width="460" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="0f1-un-cHa"/>
+                                    <constraint firstAttribute="height" constant="19" id="zIU-TP-OMO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="zIU-TP-OMO"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xYh-6E-ZQW">
+                                <rect key="frame" x="20" y="20" width="92" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="wNQ-RO-tYL"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="wnQ-oE-XDf"/>
+                                    <constraint firstAttribute="height" constant="80" id="xeV-Sd-gIL"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wei-VO-DiT">
+                                <rect key="frame" x="120" y="252" width="30" height="30"/>
+                                <state key="normal" title="Like"/>
+                                <connections>
+                                    <action selector="addLike:" destination="1Qa-5Q-Mxi" eventType="touchDown" id="hLY-Mv-Qy8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="678-Y1-OHA" firstAttribute="trailing" secondItem="2hW-qu-EPb" secondAttribute="trailingMargin" id="20s-Yl-L1Q"/>
+                            <constraint firstItem="678-Y1-OHA" firstAttribute="top" secondItem="2hW-qu-EPb" secondAttribute="topMargin" constant="1" id="4Sa-3f-yV0"/>
+                            <constraint firstItem="wei-VO-DiT" firstAttribute="top" secondItem="x86-R0-153" secondAttribute="bottom" constant="100" id="AaG-VZ-cDm"/>
+                            <constraint firstItem="x86-R0-153" firstAttribute="leading" secondItem="2hW-qu-EPb" secondAttribute="leadingMargin" id="AhZ-hl-bts"/>
                             <constraint firstItem="xG9-Yf-WD0" firstAttribute="top" secondItem="x86-R0-153" secondAttribute="bottom" id="RPc-44-2DI"/>
+                            <constraint firstItem="wei-VO-DiT" firstAttribute="leading" secondItem="2hW-qu-EPb" secondAttribute="leadingMargin" constant="100" id="Tg0-i2-Yna"/>
+                            <constraint firstItem="678-Y1-OHA" firstAttribute="top" secondItem="LZn-hc-jcI" secondAttribute="bottom" id="Wo9-qG-n3Q"/>
+                            <constraint firstItem="xYh-6E-ZQW" firstAttribute="top" secondItem="LZn-hc-jcI" secondAttribute="bottom" id="ZzA-n3-Ji0"/>
                             <constraint firstItem="x86-R0-153" firstAttribute="leading" secondItem="2hW-qu-EPb" secondAttribute="leadingMargin" id="alk-XY-cGS"/>
+                            <constraint firstItem="x86-R0-153" firstAttribute="top" secondItem="678-Y1-OHA" secondAttribute="bottom" id="d3e-AF-mbU"/>
+                            <constraint firstItem="x86-R0-153" firstAttribute="trailing" secondItem="2hW-qu-EPb" secondAttribute="trailingMargin" id="eKH-21-AQJ"/>
+                            <constraint firstItem="678-Y1-OHA" firstAttribute="leading" secondItem="2hW-qu-EPb" secondAttribute="leadingMargin" id="ewm-Dg-Hcx"/>
+                            <constraint firstItem="x86-R0-153" firstAttribute="top" secondItem="678-Y1-OHA" secondAttribute="bottom" constant="8" symbolic="YES" id="fMq-K2-che"/>
                             <constraint firstItem="x86-R0-153" firstAttribute="top" secondItem="LZn-hc-jcI" secondAttribute="bottom" id="hOn-Nn-9It"/>
                             <constraint firstAttribute="trailingMargin" secondItem="x86-R0-153" secondAttribute="trailing" id="ihu-FQ-SeB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="678-Y1-OHA" secondAttribute="trailing" id="pJG-fe-nf9"/>
+                            <constraint firstItem="xYh-6E-ZQW" firstAttribute="leading" secondItem="2hW-qu-EPb" secondAttribute="leadingMargin" id="yDo-uf-pk5"/>
+                            <constraint firstItem="678-Y1-OHA" firstAttribute="leading" secondItem="2hW-qu-EPb" secondAttribute="leadingMargin" constant="100" id="yqX-Xf-WQk"/>
+                            <constraint firstItem="678-Y1-OHA" firstAttribute="leading" secondItem="xYh-6E-ZQW" secondAttribute="trailing" constant="8" id="z9e-TL-LcQ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="4Sa-3f-yV0"/>
+                                <exclude reference="ewm-Dg-Hcx"/>
+                                <exclude reference="pJG-fe-nf9"/>
+                                <exclude reference="alk-XY-cGS"/>
+                                <exclude reference="fMq-K2-che"/>
+                                <exclude reference="hOn-Nn-9It"/>
+                                <exclude reference="ihu-FQ-SeB"/>
                                 <exclude reference="RPc-44-2DI"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="bodyDetail" destination="x86-R0-153" id="7mh-EZ-crx"/>
+                        <outlet property="imgDetail" destination="xYh-6E-ZQW" id="vNd-c9-Ea8"/>
+                        <outlet property="likeButton" destination="wei-VO-DiT" id="HLs-SQ-yET"/>
+                        <outlet property="titleDetail" destination="678-Y1-OHA" id="h6y-rH-meI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dlc-vy-OBL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="247" y="210"/>
+            <point key="canvasLocation" x="276" y="234"/>
         </scene>
     </scenes>
 </document>

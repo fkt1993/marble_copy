@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 import SwiftyJSON
+import RealmSwift
+import Realm
 
 struct User {
     
@@ -27,4 +29,9 @@ struct User {
         screenName = json["screenname"].string ?? ""
         userName = json["username"].string ?? ""
     }
+}
+class LikeUser: Object {
+    dynamic var id = 0
+    dynamic var screenName = ""
+    dynamic var userName = ""
 }

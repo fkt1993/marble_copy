@@ -10,9 +10,12 @@ import Foundation
 import UIKit
 import SwiftyJSON
 import Alamofire
+import RealmSwift
+import Realm
 
 struct Article {
     
+    let id: Int
     let title: String
     let body: String
     let categoryId: Int
@@ -30,6 +33,7 @@ struct Article {
     
     init(json: JSON) {
         let article = json["Article"]
+        id = article["id"].intValue
         title = article["title"].stringValue
         body = article["body"].stringValue
         categoryId = article["category_id"].intValue
@@ -73,3 +77,48 @@ struct ArticleSerializer: ResponseSerializerType {
         return Result.Success((max, articles))
     }
 }
+class Book : Object {
+    dynamic var isbn = ""
+    dynamic var name = ""
+    dynamic var price = 0
+}
+class LikeArticle : Object {
+    dynamic var id = 0
+    dynamic var title = ""
+    dynamic var body = ""
+    dynamic var categoryId = 0
+    dynamic var itemOrder = ""
+    dynamic var modified = 0
+    dynamic var onePage = 0
+    dynamic var provider = ""
+    dynamic var published =  NSDate()
+    dynamic var thumb = ""
+    dynamic var thumbNormal = ""
+    dynamic var thumbOriginal = ""
+    dynamic var thumbStatus = 0
+    dynamic var thumbUpdated = NSDate()
+    dynamic var user_id = 0
+    dynamic var user_screenName = ""
+    dynamic var user_userName = ""
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+}
+//class User: Object {
+//    dynamic var age = 0
+//}
+
+//class TestData: Object {
+//    dynamic var flag = true
+//    dynamic var byte: Int8 = 0
+//    dynamic var short: Int16 = 0
+//    dynamic var long: Int32 = 0
+//    dynamic var longlong: Int64 = 0
+//    dynamic var double: Double = 0
+//    dynamic var float: Float = 0
+//    
+//    dynamic var string: String = ""
+//    dynamic var date = NSDate()
+//    dynamic var data = NSData()
+//}

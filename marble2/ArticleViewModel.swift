@@ -16,12 +16,12 @@ class ArticleViewModel: NSObject {
     
     var max: Int = 0
     private let apiManager = ApiManager.sharedInstance
+    var articles: [Article]?
 
     func fetchArticleList(params: [String: AnyObject]) -> Future<(Int,[Article]), NSError>  {
         let serializer = ArticleSerializer()
-        let url = "http://api.topicks.jp/api/v1/articles/list.json?search_type=category"
+        let url = "http://api.topicks.jp/api/v1/articles/list.json"
         
         return apiManager.get(url, params: params,serializer:serializer)
     }
-
 }

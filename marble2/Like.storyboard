@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pzc-x9-3X2">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Like View Controller-->
+        <scene sceneID="bD5-0m-KX4">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="cOI-cQ-QDt" customClass="LikeViewController" customModule="marble2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ozp-pR-95r"/>
+                        <viewControllerLayoutGuide type="bottom" id="JCa-1c-y5M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="95m-Xe-Qbx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hqC-fg-DSC">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GeZ-nF-kmu" customClass="LikeCell" customModule="marble2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GeZ-nF-kmu" id="ZXE-z1-Bua">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="cOI-cQ-QDt" id="pUg-YF-Xrv"/>
+                                    <outlet property="delegate" destination="cOI-cQ-QDt" id="zy0-Yk-yY9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hqC-fg-DSC" secondAttribute="trailing" id="4ow-5L-zS4"/>
+                            <constraint firstItem="hqC-fg-DSC" firstAttribute="leading" secondItem="95m-Xe-Qbx" secondAttribute="leading" id="AZF-Ee-Zvn"/>
+                            <constraint firstItem="hqC-fg-DSC" firstAttribute="top" secondItem="Ozp-pR-95r" secondAttribute="bottom" id="WzP-P9-I8U"/>
+                            <constraint firstItem="JCa-1c-y5M" firstAttribute="top" secondItem="hqC-fg-DSC" secondAttribute="bottom" id="iMA-6Q-xwV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LDJ-I2-VLm"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="likeView" destination="hqC-fg-DSC" id="3vR-wP-wf1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3mW-u8-j7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1148" y="315"/>
+        </scene>
+        <!--Like-->
+        <scene sceneID="svo-fq-r8b">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pzc-x9-3X2" customClass="ArticleContainerController" customModule="marble2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Like" id="1fK-gi-ZRH"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7R5-6h-yy1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cOI-cQ-QDt" kind="relationship" relationship="rootViewController" id="gLU-2I-fH2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hEP-Uy-uWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="336" y="315"/>
+        </scene>
+    </scenes>
+</document>

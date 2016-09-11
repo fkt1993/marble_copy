@@ -15,12 +15,14 @@ class ArticleViewController: UIViewController,UITableViewDelegate,UITableViewDat
     private let viewmodel = ArticleViewModel()
     private let apiManager: ApiManager = ApiManager.sharedInstance
     private var articles: [Article]?
+    private var articleCount: Int = 0
+    
+    var nowLoading: Bool = false
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        title = "marble"
+        title = "marble" //ナビゲーションバーのタイトル
         tableView.registerNib(UINib(nibName: "ArticleCell", bundle: nil), forCellReuseIdentifier: "ArticleCell")
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
@@ -33,6 +35,7 @@ class ArticleViewController: UIViewController,UITableViewDelegate,UITableViewDat
         viewmodel.fetchArticleList(params)
             .onSuccess { [weak self] data in
                 self?.articles = data.1
+                self?.articleCount = (self?.articleCount)! + 30
                 self?.tableView.reloadData()
             }
             .onFailure { [weak self] error in
@@ -68,7 +71,64 @@ class ArticleViewController: UIViewController,UITableViewDelegate,UITableViewDat
             navigationController?.pushViewController(nextVC, animated: true)
         }
     }
+    func scrollViewDidScroll(scrollView: UIScrollView){
+        if self.nowLoading {
+            return
+        }
+        
+        let currentOffset = scrollView.contentOffset.y
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+        
+        let o = maximumOffset - currentOffset
+        
+        if o <= 200 {//一番下までスクロールしたら
+            self.nowLoading = true
+            let params: [String: AnyObject] = [
+                "search_type": "category",
+                "offset": self.articleCount,
+                "limit": 30
+            ]
+            
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = true;
+            
+            viewmodel.fetchArticleList(params)
+                .onSuccess { [weak self] data in
+                    self?.articles = self?.mergeArticles(data.1)
+                    print(self?.articles)
+                    UIView.animateWithDuration(0.3, animations: {
+                        guard let before = self?.tableView.contentSize.height else{
+                            return
+                        }
+                        self?.tableView.reloadData()
+                        guard let after = self?.tableView.contentSize.height else{
+                            return
+                        }
+                        if(before<after) {
+                            self?.tableView.contentOffset.y = after - before
+                        }
+                        self?.articleCount = (self?.articleCount)! + 30
+                        self?.nowLoading = false
+                    })
+                    UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                }
+                .onFailure { [weak self] error in
+                    self?.showErrorAlert(error.localizedDescription, completion: nil)
+                    UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            }
 
+        }
+        
+        
+    }
+    private func mergeArticles(articles: [Article]) -> [Article] {
+        
+        if let _ = self.articles {
+            let newArticles = self.articles! + articles
+            return newArticles
+        }else{
+            return articles
+        }
+    }
     
     
     override func didReceiveMemoryWarning() {

@@ -43,5 +43,23 @@ class ArticleCell: UITableViewCell {
         }
 
     }
+    func setCell2(article :LikeArticle) {
+        titleLabel.text = article.title
+        descriptionLabel.text = article.body
+        userLabel.text = article.user_userName
+        
+        let format = NSDateFormatter()
+        format.locale = NSLocale(localeIdentifier: "ja_JP")
+        format.dateFormat = "yyyy/MM/dd"
+                dateLabel.text = format.stringFromDate(article.published)
+        
+                let url = NSURL(string:article.thumbOriginal)
+                let req = NSURLRequest(URL:url!)
+                NSURLConnection.sendAsynchronousRequest(req, queue:NSOperationQueue.mainQueue()){(res, data, err) in
+                    let image = UIImage(data:data!)
+                    self.articleImg.image = image
+        }
+        
+    }
 
 }
